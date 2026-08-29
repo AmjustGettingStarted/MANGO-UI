@@ -4,7 +4,7 @@ import Stats from '@/components/landing/stats';
 import Features from '@/components/landing/features';
 import AnimatedBento from '@/components/landing/animated-bento';
 import { Metadata } from 'next';
-// import ComponentsBento from '@/components/landing/component-bento';
+import ComponentsBento from '@/components/landing/component-bento';
 // import TemplateBento from '@/components/landing/template-bento';
 // import Testimonial from '@/components/landing/testimonial';
 // import Footer from '@/components/landing/footer';
@@ -21,7 +21,7 @@ export default function App() {
       <Stats />
       <Features />
       <AnimatedBento />
-      {/* <ComponentsBento /> */}
+      <ComponentsBento />
       {/* <TemplateBento /> */}
       {/* <Testimonial /> */}
       {/* <Footer /> */}
