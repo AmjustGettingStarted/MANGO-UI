@@ -48,14 +48,14 @@ function BrowserMockup({ children, url }: { children: React.ReactNode; url: stri
 }
 
 const IMAGES = [
-    "https://assets.Mango.sh/lp-hero-01.avif",
-    "https://assets.Mango.sh/lp-footer-01.avif",
-    "https://assets.Mango.sh/lp-hero-02.avif",
-    "https://assets.Mango.sh/lp-footer-02.avif",
-    "https://assets.Mango.sh/lp-hero-03.avif",
-    "https://assets.Mango.sh/lp-footer-03.avif",
-    "https://assets.Mango.sh/lp-hero-05.avif",
-    "https://assets.Mango.sh/lp-hero-04.avif"
+    "https://assets.Watermelon.sh/lp-hero-01.avif",
+    "https://assets.Watermelon.sh/lp-footer-01.avif",
+    "https://assets.Watermelon.sh/lp-hero-02.avif",
+    "https://assets.Watermelon.sh/lp-footer-02.avif",
+    "https://assets.Watermelon.sh/lp-hero-03.avif",
+    "https://assets.Watermelon.sh/lp-footer-03.avif",
+    "https://assets.Watermelon.sh/lp-hero-05.avif",
+    "https://assets.Watermelon.sh/lp-hero-04.avif"
 ];
 
 export default function TemplateBento() {
@@ -122,7 +122,7 @@ export default function TemplateBento() {
                     viewport={{ once: true, margin: "-50px" }}
                 >
                     <TemplateCard variants={itemVariants}>
-                        <BrowserMockup url="[ Mango-UI.COM/TEMPLATES ]">
+                        <BrowserMockup url="[ Watermelon-UI.COM/TEMPLATES ]">
                             <div className="flex-1 w-full border border-white/20 flex flex-col items-center justify-center bg-black relative z-10 overflow-hidden group-hover:border-primary/50 transition-colors duration-500">
                                 <AnimatePresence mode="wait">
                                     <motion.img
@@ -132,7 +132,7 @@ export default function TemplateBento() {
                                         animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                                         exit={{ opacity: 0, scale: 1.02, filter: "blur(4px)" }}
                                         transition={{ duration: 0.5, ease: "easeInOut" }}
-                                        className="w-full h-full object-cover object-top"
+                                        className="w-full h-full object-fit object-top"
                                         alt={`Template preview ${currentIndex + 1}`}
                                     />
                                 </AnimatePresence>
