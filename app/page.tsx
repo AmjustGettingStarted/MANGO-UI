@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 import ComponentsBento from '@/components/landing/component-bento';
 import TemplateBento from '@/components/landing/template-bento';
 import Testimonial from '@/components/landing/testimonial';
-// import Footer from '@/components/landing/footer';
+import Footer from '@/components/landing/footer';
 
 export const metadata: Metadata = {
   title: 'MANGO UI',
@@ -24,7 +24,7 @@ export default function App() {
       <ComponentsBento />
       <TemplateBento />
       <Testimonial />
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }
