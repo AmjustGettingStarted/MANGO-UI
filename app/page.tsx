@@ -1,6 +1,6 @@
 import Navbar from '@/components/landing/navbar';
 import Hero from '@/components/landing/hero';
-// import Stats from '@/components/landing/stats';
+import Stats from '@/components/landing/stats';
 // import Features from '@/components/landing/features';
 // import AnimatedBento from '@/components/landing/animated-bento';
 // import ComponentsBento from '@/components/landing/component-bento';
@@ -13,7 +13,7 @@ export default function App() {
     <main className="dark min-h-screen overflow-x-hidden bg-[#101010]">
       <Navbar />
       <Hero />
-      {/* <Stats /> */}
+      <Stats />
       {/* <Features /> */}
       {/* <AnimatedBento /> */}
       {/* <ComponentsBento /> */}
