@@ -5,8 +5,8 @@ import Features from '@/components/landing/features';
 import AnimatedBento from '@/components/landing/animated-bento';
 import { Metadata } from 'next';
 import ComponentsBento from '@/components/landing/component-bento';
-// import TemplateBento from '@/components/landing/template-bento';
-// import Testimonial from '@/components/landing/testimonial';
+import TemplateBento from '@/components/landing/template-bento';
+import Testimonial from '@/components/landing/testimonial';
 // import Footer from '@/components/landing/footer';
 
 export const metadata: Metadata = {
@@ -22,8 +22,8 @@ export default function App() {
       <Features />
       <AnimatedBento />
       <ComponentsBento />
-      {/* <TemplateBento /> */}
-      {/* <Testimonial /> */}
+      <TemplateBento />
+      <Testimonial />
       {/* <Footer /> */}
     </main>
   );
