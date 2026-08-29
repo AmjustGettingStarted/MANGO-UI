@@ -8,6 +8,7 @@ import ComponentsBento from '@/components/landing/component-bento';
 import TemplateBento from '@/components/landing/template-bento';
 import Testimonial from '@/components/landing/testimonial';
 import Footer from '@/components/landing/footer';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'MANGO UI',

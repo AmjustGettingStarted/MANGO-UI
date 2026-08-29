@@ -41,10 +41,10 @@ export default function Navbar() {
                 {/* Right side */}
                 <div className="hidden md:flex items-center gap-4">
                     <div className="flex items-center gap-2">
-                        <a href="https://github.com/MangoCorp/Mango-platform" target="_blank" rel="noreferrer" className="flex items-center justify-center h-10 w-10 border border-white/10 bg-transparent text-white/50 hover:text-white hover:bg-white/5 transition-colors">
+                        <a href="/" target="_blank" rel="noreferrer" className="flex items-center justify-center h-10 w-10 border border-white/10 bg-transparent text-white/50 hover:text-white hover:bg-white/5 transition-colors">
                             <GithubIcon className="w-4 h-4" />
                         </a>
-                        <a href="https://x.com/Mangoui" target="_blank" rel="noreferrer" className="flex items-center justify-center h-10 w-10 border border-white/10 bg-transparent text-white/50 hover:text-white hover:bg-white/5 transition-colors">
+                        <a href="/" target="_blank" rel="noreferrer" className="flex items-center justify-center h-10 w-10 border border-white/10 bg-transparent text-white/50 hover:text-white hover:bg-white/5 transition-colors">
                             <NewTwitterIcon className="w-4 h-4" />
                         </a>
                     </div>
