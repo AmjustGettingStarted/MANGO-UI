@@ -66,14 +66,14 @@ export default function Footer() {
                     {/* Left Side: Brand & Newsletter (span 5) */}
                     <div className="flex flex-col items-start pr-0 lg:col-span-5 lg:pr-8">
                         <div className="text-primary mb-6 flex items-center gap-2 font-mono text-xs tracking-widest">
-                            <span className="opacity-70">{'//'}</span> WATERMELON UI
+                            <span className="opacity-70">{'//'}</span> Mango UI
                         </div>
                         <h3 className="mb-6 font-sans text-3xl tracking-tight text-balance md:text-5xl">
                             Building the future <br className="hidden lg:block" /> of
                             interfaces
                         </h3>
                         <p className="mb-8 max-w-md text-sm leading-relaxed text-pretty text-white/50">
-                            Watermelon UI is the foundational layer for modern web
+                            Mango UI is the foundational layer for modern web
                             applications—beautifully designed, perfectly animated, and deeply
                             technical
                         </p>
@@ -97,8 +97,8 @@ export default function Footer() {
 
                         <FooterLinkColumn title="COMMUNITY">
                             <FooterLink href="">Discord</FooterLink>
-                            <FooterLink href="https://github.com/WatermelonCorp/watermelon-platform">GitHub</FooterLink>
-                            <FooterLink href="https://x.com/watermelonui">X (Twitter)</FooterLink>
+                            <FooterLink href="https://github.com/MangoCorp/Mango-platform">GitHub</FooterLink>
+                            <FooterLink href="https://x.com/Mangoui">X (Twitter)</FooterLink>
                         </FooterLinkColumn>
 
                         <FooterLinkColumn title="COMPANY">
@@ -137,7 +137,7 @@ export default function Footer() {
                         </div>
 
                         <div className="text-primary font-mono text-xs tracking-widest">
-                            {'[ WATERMELON UI ]'}
+                            {'[ Mango UI ]'}
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ export default function Footer() {
                                 {/* <LogoIcon className="text-primary h-full w-full" /> */}
                             </div>
                             <span className="font-sans text-lg font-bold tracking-tight text-white/90">
-                                Watermelon UI
+                                Mango UI
                             </span>
                         </div>
 
@@ -167,7 +167,7 @@ export default function Footer() {
 
                     <div className="flex w-full flex-col items-start justify-between gap-4 text-xs tracking-widest text-white/40 uppercase md:flex-row md:items-center md:gap-16 xl:w-auto xl:justify-end">
                         <div className="flex flex-col gap-1">
-                            <span>&copy; 2026 Watermelon UI.</span>
+                            <span>&copy; 2026 Mango UI.</span>
                             <span>All rights reserved.</span>
                         </div>
                         <div className="flex gap-4 md:gap-6">
@@ -185,8 +185,8 @@ export default function Footer() {
                             <span className="opacity-70">{'//'}</span> CONNECT
                         </div>
                         <div className="flex items-center gap-4">
-                            <SocialLink href="https://x.com/watermelonui" icon={NewTwitterIcon} />
-                            <SocialLink href="https://github.com/WatermelonCorp/watermelon-platform" icon={GithubIcon} />
+                            <SocialLink href="https://x.com/Mangoui" icon={NewTwitterIcon} />
+                            <SocialLink href="https://github.com/MangoCorp/Mango-platform" icon={GithubIcon} />
                             <SocialLink href="#" icon={DiscordIcon} />
                         </div>
                     </div>

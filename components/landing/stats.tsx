@@ -179,7 +179,7 @@ export default function Stats() {
                         className="mt-6 max-w-2xl font-mono text-sm tracking-widest text-pretty text-white/50 uppercase"
                     >
                         Stop re-building the same interfaces.
-                        <br className="mt-2 block md:hidden" /> Watermelon UI provides an
+                        <br className="mt-2 block md:hidden" /> Mango UI provides an
                         extensive catalog of pre-built blocks.
                     </motion.p>
                 </motion.div>

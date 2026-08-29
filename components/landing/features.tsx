@@ -101,7 +101,7 @@ export default function Features() {
                             variant="big"
                             className="text-foreground font-sans text-balance"
                         >
-                            Why choose <span className="text-primary">Watermelon</span>  UI?
+                            Why choose <span className="text-primary">Mango</span>  UI?
                         </Heading>
                     </motion.div>
                 </motion.div>

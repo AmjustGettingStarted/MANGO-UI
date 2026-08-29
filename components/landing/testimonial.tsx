@@ -157,7 +157,7 @@ const testimonials: Testimonial[] = [
     {
         id: 8,
         content:
-            'this one of the best way to show pricing plans on mobile built by @watermelonui',
+            'this one of the best way to show pricing plans on mobile built by @Mangoui',
         author: 'Ali bey',
         handle: '@alibey_10',
         avatar: 'https://unavatar.io/x/alibey_10',

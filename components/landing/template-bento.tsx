@@ -48,14 +48,14 @@ function BrowserMockup({ children, url }: { children: React.ReactNode; url: stri
 }
 
 const IMAGES = [
-    "https://assets.watermelon.sh/lp-hero-01.avif",
-    "https://assets.watermelon.sh/lp-footer-01.avif",
-    "https://assets.watermelon.sh/lp-hero-02.avif",
-    "https://assets.watermelon.sh/lp-footer-02.avif",
-    "https://assets.watermelon.sh/lp-hero-03.avif",
-    "https://assets.watermelon.sh/lp-footer-03.avif",
-    "https://assets.watermelon.sh/lp-hero-05.avif",
-    "https://assets.watermelon.sh/lp-hero-04.avif"
+    "https://assets.Mango.sh/lp-hero-01.avif",
+    "https://assets.Mango.sh/lp-footer-01.avif",
+    "https://assets.Mango.sh/lp-hero-02.avif",
+    "https://assets.Mango.sh/lp-footer-02.avif",
+    "https://assets.Mango.sh/lp-hero-03.avif",
+    "https://assets.Mango.sh/lp-footer-03.avif",
+    "https://assets.Mango.sh/lp-hero-05.avif",
+    "https://assets.Mango.sh/lp-hero-04.avif"
 ];
 
 export default function TemplateBento() {
@@ -122,7 +122,7 @@ export default function TemplateBento() {
                     viewport={{ once: true, margin: "-50px" }}
                 >
                     <TemplateCard variants={itemVariants}>
-                        <BrowserMockup url="[ WATERMELON-UI.COM/TEMPLATES ]">
+                        <BrowserMockup url="[ Mango-UI.COM/TEMPLATES ]">
                             <div className="flex-1 w-full border border-white/20 flex flex-col items-center justify-center bg-black relative z-10 overflow-hidden group-hover:border-primary/50 transition-colors duration-500">
                                 <AnimatePresence mode="wait">
                                     <motion.img
