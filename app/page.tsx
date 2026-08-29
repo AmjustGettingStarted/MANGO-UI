@@ -2,11 +2,16 @@ import Navbar from '@/components/landing/navbar';
 import Hero from '@/components/landing/hero';
 import Stats from '@/components/landing/stats';
 import Features from '@/components/landing/features';
-// import AnimatedBento from '@/components/landing/animated-bento';
+import AnimatedBento from '@/components/landing/animated-bento';
+import { Metadata } from 'next';
 // import ComponentsBento from '@/components/landing/component-bento';
 // import TemplateBento from '@/components/landing/template-bento';
 // import Testimonial from '@/components/landing/testimonial';
 // import Footer from '@/components/landing/footer';
+
+export const metadata: Metadata = {
+  title: 'MANGO UI',
+};
 
 export default function App() {
   return (
@@ -15,7 +20,7 @@ export default function App() {
       <Hero />
       <Stats />
       <Features />
-      {/* <AnimatedBento /> */}
+      <AnimatedBento />
       {/* <ComponentsBento /> */}
       {/* <TemplateBento /> */}
       {/* <Testimonial /> */}
