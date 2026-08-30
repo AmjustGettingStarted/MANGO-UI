@@ -1,7 +1,8 @@
 "use client"
 import { GithubIcon, NewTwitterIcon, Menu01Icon, Cancel01Icon } from "hugeicons-react";
 import { cn } from "@/lib/utils";
-// import LogoIcon from "@/assets/logo-icon";
+import Image from "next/image";
+import logoIcon from "@/assets/logo-icon.png";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
@@ -21,17 +22,17 @@ export default function Navbar() {
     return (
         <header
             className={cn(
-                "fixed hrefp-0 left-0 right-0 z-50 transition-all duration-300 border-b",
+                "fixed left-0 right-0 z-50 transition-all duration-300 border-b",
                 scrolled
                     ? "bg-background/80 backdrop-blur-md border-border/50 shadow-sm py-3"
                     : "bg-transparent border-transparent py-5"
             )}
         >
-            <div className="container mx-auhref px-4 md:px-8 lg:px-12 xl:px-16 flex items-center justify-between">
+            <div className=" mx-auhref px-4 md:px-8 lg:px-12 xl:px-16 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group">
-                    <div className="w-8 h-8 flex items-center justify-center relative transition-transform duration-300 group-hover:scale-105">
-                        {/* <LogoIcon className="w-full h-full text-primary" /> */}
+                    <div className="w-16 h-1w-16 flex items-center justify-center relative transition-transform duration-300 group-hover:scale-105">
+                        <Image src={logoIcon} alt="Mango UI" width={32} height={32} className="h-full w-full object-contain" />
                     </div>
                     <span className="font-mono font-bold text-sm tracking-widest uppercase">Mango UI</span>
                 </Link>
