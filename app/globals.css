@@ -121,13 +121,55 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-mono;
   }
-  button:not(:disabled), [role="button"]:not(:disabled) {
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+}
+
+/* Custom Scrollbar */
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  /* For horizontal scrollbars */
+}
+
+/* 2. Style the background track */
+::-webkit-scrollbar-track {
+  background-color: #18181b;
+  /* Dark background to make yellow pop */
+  border-radius: 8px;
+}
+
+/* 3. Style the scrollbar thumb (the yellow bar) */
+::-webkit-scrollbar-thumb {
+  background-color: #eab308;
+  /* Vibrant Yellow (Tailwind yellow-500) */
+  border-radius: 8px;
+  border: 3px solid #18181b;
+  /* Outer padding effect inside the track */
+}
+
+/* 4. Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #facc15;
+  /* Brighter yellow on hover (Tailwind yellow-400) */
+}
+
+/* Firefox Support */
+* {
+  scrollbar-width: auto;
+  /* Options: auto (thick) | thin */
+  scrollbar-color: #eab308 #18181b;
+  /* thumb color track color */
 }
