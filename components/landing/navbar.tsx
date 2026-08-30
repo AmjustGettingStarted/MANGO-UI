@@ -31,10 +31,10 @@ export default function Navbar() {
             <div className=" mx-auhref px-4 md:px-8 lg:px-12 xl:px-16 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-3 group">
-                    <div className="w-16 h-1w-16 flex items-center justify-center relative transition-transform duration-300 group-hover:scale-105">
-                        <Image src={logoIcon} alt="Mango UI" width={32} height={32} className="h-full w-full object-contain" />
+                    <div className="w-32 h-16 flex items-center justify-center relative transition-transform duration-300 group-hover:scale-105">
+                        <Image src={logoIcon} alt="Mango UI" width={96} height={96} className="h-full w-full object-contain" />
                     </div>
-                    <span className="font-mono font-bold text-sm tracking-widest uppercase">Mango UI</span>
+                    {/* <span className="font-mono font-bold text-sm tracking-widest uppercase">Mango UI</span> */}
                 </Link>
 
 
