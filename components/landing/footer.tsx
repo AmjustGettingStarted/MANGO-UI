@@ -5,7 +5,8 @@ import {
     DiscordIcon,
 } from 'hugeicons-react';
 import { cn } from '@/lib/utils';
-// import LogoIcon from '@/assets/logo-icon';
+import Image from 'next/image';
+import logoIcon from '@/assets/logo-icon.png';
 
 function Crosshair({ position }: { position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' }) {
     const isTop = position.startsWith('top');
@@ -60,7 +61,7 @@ export default function Footer() {
             <Crosshair position="top-left" />
             <Crosshair position="top-right" />
 
-            <div className="relative z-10 container mx-auto px-4 pt-20 pb-12 md:px-8 lg:px-12 xl:px-16">
+            <div className="relative z-10 mx-auto px-4 pt-20 pb-12 md:px-8 lg:px-12 xl:px-16">
                 {/* Top Grid */}
                 <div className="relative grid grid-cols-1 gap-12 border-b border-white/5 pb-16 lg:grid-cols-12 lg:gap-8">
                     {/* Left Side: Brand & Newsletter (span 5) */}
@@ -89,22 +90,30 @@ export default function Footer() {
                     {/* Right Side: Links (span 7) */}
                     <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:col-span-7 lg:pl-8">
                         <FooterLinkColumn title="PRODUCT">
-                            <FooterLink href="/animated-components">Animated</FooterLink>
-                            <FooterLink href="/components">Components</FooterLink>
-                            <FooterLink href="/blocks">Blocks</FooterLink>
-                            <FooterLink href="/dashboards">Dashboards</FooterLink>
+                            <FooterLink href="/home">Animated</FooterLink>
+                            <FooterLink href="/home">Components</FooterLink>
+                            <FooterLink href="/home">Blocks</FooterLink>
+                            <FooterLink href="/home">Dashboards</FooterLink>
                         </FooterLinkColumn>
 
                         <FooterLinkColumn title="COMMUNITY">
-                            <FooterLink href="">Discord</FooterLink>
-                            <FooterLink href="https://github.com/MangoCorp/Mango-platform">GitHub</FooterLink>
-                            <FooterLink href="https://x.com/Mangoui">X (Twitter)</FooterLink>
+                            <FooterLink href="/home">Discord</FooterLink>
+                            <FooterLink href="/home">GitHub</FooterLink>
+                            <FooterLink href="/home">X (Twitter)</FooterLink>
                         </FooterLinkColumn>
 
                         <FooterLinkColumn title="COMPANY">
-                            <FooterLink href="/terms">Terms</FooterLink>
-                            <FooterLink href="/privacy">Privacy</FooterLink>
-                            <FooterLink href="/copyright">Copyright</FooterLink>
+                            <FooterLink href="/home">About Us</FooterLink>
+                            <FooterLink href="/home">Careers</FooterLink>
+                            <FooterLink href="/home">Press Kit</FooterLink>
+                            <FooterLink href="/home">Contact</FooterLink>
+                        </FooterLinkColumn>
+
+                        <FooterLinkColumn title="LEGAL">
+                            <FooterLink href="/home">Security</FooterLink>
+                            <FooterLink href="/home">Cookie Policy</FooterLink>
+                            <FooterLink href="/home">Licenses</FooterLink>
+                            <FooterLink href="/home">Acceptable Use</FooterLink>
                         </FooterLinkColumn>
                     </div>
 
@@ -147,12 +156,12 @@ export default function Footer() {
                     <div className="flex w-full flex-col gap-8 md:flex-row md:items-center md:gap-12 xl:w-auto">
                         {/* Logo / Left */}
                         <div className="flex items-center gap-3">
-                            <div className="group relative flex h-8 w-8 items-center justify-center">
-                                {/* <LogoIcon className="text-primary h-full w-full" /> */}
+                            <div className="group relative flex h-36 w-36 items-center justify-center">
+                                <Image src={logoIcon} alt="Mango UI" width={96} height={96} className="h-full w-full object-contain" />
                             </div>
-                            <span className="font-sans text-lg font-bold tracking-tight text-white/90">
+                            {/* <span className="font-sans text-lg font-bold tracking-tight text-white/90">
                                 Mango UI
-                            </span>
+                            </span> */}
                         </div>
 
                         <div className="hidden flex-col border-l border-white/10 pl-8 md:flex">
@@ -171,10 +180,10 @@ export default function Footer() {
                             <span>All rights reserved.</span>
                         </div>
                         <div className="flex gap-4 md:gap-6">
-                            <a href="#" className="transition-colors hover:text-white">
+                            <a href="/home" className="transition-colors hover:text-white">
                                 Privacy Policy
                             </a>
-                            <a href="#" className="transition-colors hover:text-white">
+                            <a href="/home" className="transition-colors hover:text-white">
                                 Terms of Service
                             </a>
                         </div>
@@ -185,9 +194,9 @@ export default function Footer() {
                             <span className="opacity-70">{'//'}</span> CONNECT
                         </div>
                         <div className="flex items-center gap-4">
-                            <SocialLink href="https://x.com/Mangoui" icon={NewTwitterIcon} />
-                            <SocialLink href="https://github.com/MangoCorp/Mango-platform" icon={GithubIcon} />
-                            <SocialLink href="#" icon={DiscordIcon} />
+                            <SocialLink href="/home" icon={NewTwitterIcon} />
+                            <SocialLink href="/home" icon={GithubIcon} />
+                            <SocialLink href="/home" icon={DiscordIcon} />
                         </div>
                     </div>
                 </div>
