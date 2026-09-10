@@ -19,7 +19,7 @@ export interface NavParentItem {
     type: 'collapsible';
     title: string;
     slug: string;
-    icon: typeof SparklesIcon;
+    icon: any;
     children: NavChild[];
 }
 
@@ -132,8 +132,8 @@ export const navigationData: NavGroup[] = [
             },
             {
                 type: 'collapsible',
-                title: 'Showcase',
-                slug: 'showcase',
+                title: 'Showcases',
+                slug: 'showcases',
                 icon: SparklesIcon,
                 children: [
                     { title: 'SaaS Launch Stack', slug: 'saas-launch-stack', href: '/showcase/saas-launch-stack' },
@@ -175,7 +175,21 @@ export const navigationData: NavGroup[] = [
         ],
     },
     {
-        items: [{ type: 'flyout', title: 'Legal', slug: 'legal', icon: AuctionIcon }],
+        items: [
+            {
+                type: 'collapsible',
+                title: 'Legal',
+                slug: 'legal',
+                icon: AuctionIcon,
+                children: [
+                    { title: 'About', slug: 'about', href: '/about' },
+                    { title: 'Contact', slug: 'contact', href: '/contact' },
+                    { title: 'Terms', slug: 'terms', href: '/terms' },
+                    { title: 'Privacy', slug: 'privacy', href: '/privacy' },
+                    { title: 'Copyright', slug: 'copyright', href: '/copyright' },
+                ],
+            },
+        ],
     },
 ];
 

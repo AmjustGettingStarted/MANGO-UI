@@ -30,9 +30,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={cn("min-h-screen", "antialiased", geistSans.variable, geistMono.variable, "font-mono", jetbrainsMono.variable)}
     >
-      <body className=" bg-[#101010] text-white">
+      <body className="bg-[#101010] text-white">
         <SmoothScroll>
           <ThemeProvider
             attribute="class"
@@ -40,7 +41,6 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-
             {children}
           </ThemeProvider>
         </SmoothScroll>
