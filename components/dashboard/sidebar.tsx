@@ -18,6 +18,8 @@ import {
     CollapsibleTrigger,
 } from '@/components/ui/collapsible';
 import { navigationData, NavParentItem } from '@/lib/navigation';
+import logoIcon from "@/assets/logo-icon.png";
+import Image from 'next/image';
 
 export default function Sidebar() {
     const { isOpen, toggleSidebar } = useSidebar();
@@ -39,17 +41,15 @@ export default function Sidebar() {
                 {/* Header Branding (Fixed Height) */}
                 <div className="flex h-14 items-center justify-between px-4 shrink-0">
                     <div className="flex items-center gap-2">
-                        <div className="bg-primary flex size-7 items-center justify-center rounded-lg font-bold text-primary-foreground">
-                            M
-                        </div>
-                        <div className="flex flex-col leading-none">
-                            <span className="font-bold tracking-wider text-foreground uppercase">
-                                MANGO UI
-                            </span>
-                            <span className="text-[9px] font-semibold text-muted-foreground">
-                                beta
-                            </span>
-                        </div>
+                        <Image
+                            src={logoIcon}
+                            alt="Mango UI"
+                            className="h-7 w-auto object-contain"
+                            priority
+                        />
+                        {/* <span className="self-end pb-0.5 text-[9px] font-semibold text-muted-foreground">
+                            beta
+                        </span> */}
                     </div>
 
                     <button
