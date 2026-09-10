@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 
 export default function Header() {
     const pathname = usePathname();
-    const { isOpen, toggleSidebar } = useSidebar();
+    const { isOpen, toggleSidebar, isMobile } = useSidebar();
     const { theme, setTheme } = useTheme();
 
     // Convert pathname like "/blocks/team" or "/installation" to array ["Blocks", "Team"]
@@ -25,20 +25,20 @@ export default function Header() {
         });
 
     return (
-        <header className="sticky top-0 z-30 flex h-14 w-full items-center justify-between border-b border-border/40 bg-background/95 px-6 backdrop-blur font-mono text-xs">
-            {/* Left: Sidebar Toggle (fixed width slot) + Dynamic Breadcrumbs */}
+        <header className="sticky top-0 z-30 flex h-14 w-full items-center justify-between border-b border-border/40 bg-background/95 px-4 md:px-6 backdrop-blur font-mono text-xs">
+            {/* Left: Sidebar Toggle + Dynamic Breadcrumbs (Breadcrumbs hidden on mobile) */}
             <div className="flex items-center gap-3">
-                {!isOpen ? (
+                {(isMobile || !isOpen) && (
                     <button
                         onClick={toggleSidebar}
-                        className="flex size-8 items-center justify-center rounded-lg border border-border/50 text-muted-foreground transition-all hover:bg-muted hover:text-foreground active:scale-95"
-                        aria-label="Expand Sidebar"
+                        className="flex size-9 items-center justify-center rounded-xl border border-border/50 bg-muted/20 text-muted-foreground transition-all hover:bg-muted hover:text-foreground active:scale-95"
+                        aria-label="Toggle Sidebar"
                     >
-                        <HugeiconsIcon icon={SidebarLeftIcon} className="size-5" />
+                        <HugeiconsIcon icon={SidebarLeftIcon} className="size-4" />
                     </button>
-                ) : null}
+                )}
 
-                <nav aria-label="Breadcrumb" className="flex items-center gap-2">
+                <nav aria-label="Breadcrumb" className="hidden md:flex items-center gap-2">
                     {pathSegments.length === 0 ? (
                         <span className="font-bold text-foreground">Overview</span>
                     ) : (
@@ -63,8 +63,8 @@ export default function Header() {
                 </nav>
             </div>
 
-            {/* Center: Command Search Bar */}
-            <div className="flex flex-1 justify-center max-w-md mx-4">
+            {/* Center: Command Search Bar (Hidden on mobile, present inside mobile drawer) */}
+            <div className="hidden md:flex flex-1 justify-center max-w-md mx-4">
                 <button
                     className="flex h-9 w-full items-center justify-between rounded-full border border-border/50 bg-muted/30 px-4 text-xs text-muted-foreground transition-colors hover:bg-muted/60 focus:outline-none"
                 >
@@ -79,20 +79,21 @@ export default function Header() {
             </div>
 
             {/* Right: Custom Theme Button & Light/Dark Mode Switcher */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
                 <Link
                     href="/custom-theme"
-                    className="flex h-9 items-center gap-2 rounded-full bg-primary px-5 text-xs font-bold font-mono text-primary-foreground tracking-wider uppercase transition-all hover:bg-primary/90 active:scale-[0.96]"
+                    className="flex size-9 sm:h-9 sm:w-auto items-center justify-center rounded-full bg-primary text-primary-foreground sm:px-4 sm:gap-2 text-xs font-bold font-mono tracking-wider uppercase transition-all hover:bg-primary/90 active:scale-[0.96]"
+                    title="Add Custom Theme"
                 >
-                    <Palette className="h-3.5 w-3.5" />
-                    <span>Add Custom Theme</span>
+                    <Palette className="size-4" />
+                    <span className="hidden sm:inline">Add Custom Theme</span>
                 </Link>
 
                 {/* Theme Switcher Button */}
                 <Button
                     variant="outline"
                     size="icon"
-                    className="h-9 w-9 rounded-full border-border/50 bg-muted/20 hover:bg-muted active:scale-95 transition-transform"
+                    className="size-9 rounded-full border-border/50 bg-muted/20 hover:bg-muted active:scale-95 transition-transform"
                     onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                 >
                     <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
