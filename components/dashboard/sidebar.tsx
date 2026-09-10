@@ -20,6 +20,7 @@ import {
 import { navigationData, NavParentItem } from '@/lib/navigation';
 import logoIcon from "@/assets/logo-icon.png";
 import Image from 'next/image';
+import { NewTwitterIcon, GithubIcon, Linkedin02Icon } from 'hugeicons-react';
 
 export default function Sidebar() {
     const { isOpen, toggleSidebar } = useSidebar();
@@ -47,9 +48,9 @@ export default function Sidebar() {
                             className="h-7 w-auto object-contain"
                             priority
                         />
-                        {/* <span className="self-end pb-0.5 text-[9px] font-semibold text-muted-foreground">
+                        <span className="self-end pb-0.5 text-[9px] font-semibold text-muted-foreground">
                             beta
-                        </span> */}
+                        </span>
                     </div>
 
                     <button
@@ -122,12 +123,40 @@ export default function Sidebar() {
                 </div>
 
                 {/* Footer / Social Links (Fixed Height) */}
-                <div className="flex flex-col gap-3 border-t border-border/40 p-4 text-muted-foreground shrink-0">
-                    <span className="font-bold text-foreground">Socials</span>
-                    <div className="flex items-center gap-4 text-muted-foreground">
-                        <a href="#" className="hover:text-foreground transition-colors">𝕏</a>
-                        <a href="#" className="hover:text-foreground transition-colors">GitHub</a>
+                <div className="flex flex-col gap-3.5 border-t border-border/40 p-4 text-muted-foreground shrink-0">
+                    <span className="text-xs font-semibold text-muted-foreground">Socials</span>
+                    <div className="flex items-center gap-3.5 text-muted-foreground">
+                        <a
+                            href="https://x.com"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="X (Twitter)"
+                            className="hover:text-foreground transition-colors"
+                        >
+                            <NewTwitterIcon className="size-4" />
+                        </a>
+                        <a
+                            href="https://github.com"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="GitHub"
+                            className="hover:text-foreground transition-colors"
+                        >
+                            <GithubIcon className="size-4" />
+                        </a>
+                        <a
+                            href="https://linkedin.com"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="LinkedIn"
+                            className="hover:text-foreground transition-colors"
+                        >
+                            <Linkedin02Icon className="size-4" />
+                        </a>
                     </div>
+                    <p className="text-[11px] text-muted-foreground/70 select-none">
+                        &copy; 2026 MANGO. All rights reserved.
+                    </p>
                 </div>
 
             </div>
@@ -155,8 +184,8 @@ function SidebarCollapsibleGroup({
     return (
         <Collapsible open={open} onOpenChange={setOpen} className="w-full">
             <CollapsibleTrigger
-                className={`flex w-full items-center justify-between rounded-xl px-3 py-2 font-semibold transition-colors ${isChildActive || open
-                    ? 'bg-muted/80 text-foreground'
+                className={`flex w-full items-center justify-between rounded-xl px-3 py-2 font-semibold transition-all ${isChildActive || open
+                    ? 'text-foreground hover:bg-muted/40'
                     : 'text-muted-foreground hover:bg-muted/40 hover:text-foreground'
                     }`}
             >
@@ -165,20 +194,20 @@ function SidebarCollapsibleGroup({
                     <span>{item.title}</span>
                 </div>
                 <HugeiconsIcon
-                    icon={ArrowDown01Icon}
-                    className={`size-4 shrink-0 text-muted-foreground transition-transform duration-200 ${open ? 'rotate-180' : ''
+                    icon={ArrowRight01Icon}
+                    className={`size-4 shrink-0 text-muted-foreground transition-transform duration-200 ${open ? 'rotate-90 text-foreground' : ''
                         }`}
                 />
             </CollapsibleTrigger>
-            <CollapsibleContent className="flex flex-col gap-0.5 pl-9 pt-1">
+            <CollapsibleContent className="flex flex-col gap-1 ml-4 pl-3.5 border-l border-border/40 pt-1.5 pb-1">
                 {item.children.map((child) => {
                     const isActive = pathname === child.href;
                     return (
                         <Link
                             key={child.href}
                             href={child.href}
-                            className={`rounded-lg px-2 py-1.5 transition-colors ${isActive
-                                ? 'text-foreground font-bold bg-muted/60'
+                            className={`rounded-lg px-2.5 py-1.5 text-xs transition-all ${isActive
+                                ? 'border border-zinc-600 bg-muted/20 text-foreground font-semibold'
                                 : 'text-muted-foreground hover:text-foreground hover:bg-muted/30'
                                 }`}
                         >
